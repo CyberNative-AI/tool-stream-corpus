@@ -1,0 +1,109 @@
+[
+  {
+    "expected": [
+      {
+        "arguments": {
+          "code": "print(\"hello\")\nprint(\"α🙂\")"
+        },
+        "id": "c0",
+        "name": "write"
+      }
+    ],
+    "id": "valid-lf",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [
+      {
+        "arguments": {
+          "code": "print(\"hello\")\nprint(\"α🙂\")"
+        },
+        "id": "c0",
+        "name": "write"
+      }
+    ],
+    "id": "valid-crlf",
+    "stream": ": heartbeat\r\n\r\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\r\n\r\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\r\n\r\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\r\n\r\ndata: [DONE]\r\n\r\n"
+  },
+  {
+    "expected": [
+      {
+        "arguments": {
+          "code": "print(\"hello\")\nprint(\"α🙂\")"
+        },
+        "id": "c0",
+        "name": "write"
+      }
+    ],
+    "id": "valid-cr",
+    "stream": ": heartbeat\r\rdata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\r\rdata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\r\rdata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\r\rdata: [DONE]\r\r"
+  },
+  {
+    "expected": [
+      {
+        "arguments": {
+          "code": "print(\"hello\")\nprint(\"α🙂\")"
+        },
+        "id": "c0",
+        "name": "write"
+      }
+    ],
+    "id": "valid-bom-multidata",
+    "stream": "﻿: heartbeat\n\ndata: {\"choices\": [{\"index\": 0,\ndata: \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0,\ndata: \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0,\ndata: \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [],
+    "id": "length-after-valid-json",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"length\"}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [],
+    "id": "disconnect-after-valid-json",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\n"
+  },
+  {
+    "expected": [],
+    "id": "done-without-finish",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [],
+    "id": "stop-instead-of-tool-finish",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"stop\"}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [],
+    "id": "incomplete-arguments",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [
+      {
+        "arguments": {
+          "code": "print(\"hello\")\nprint(\"α🙂\")"
+        },
+        "id": "c0",
+        "name": "write"
+      },
+      {
+        "arguments": {
+          "q": "weather"
+        },
+        "id": "c1",
+        "name": "lookup"
+      }
+    ],
+    "id": "two-interleaved-calls",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 1, \"function\": {\"arguments\": \"{\\\"q\\\":\", \"name\": \"lookup\"}, \"id\": \"c1\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 1, \"function\": {\"arguments\": \"\\\"weather\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\n\ndata: [DONE]\n\n"
+  },
+  {
+    "expected": [],
+    "id": "finish-event-missing-blank-line",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"{\\\"code\\\": \\\"pr\", \"name\": \"write\"}, \"id\": \"c0\"}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"tool_calls\": [{\"index\": 0, \"function\": {\"arguments\": \"int(\\\\\\\"hello\\\\\\\")\\\\nprint(\\\\\\\"α🙂\\\\\\\")\\\"}\"}}]}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"tool_calls\"}]}\n"
+  },
+  {
+    "expected": [],
+    "id": "text-only",
+    "stream": ": heartbeat\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {\"content\": \"hello\"}, \"finish_reason\": null}]}\n\ndata: {\"choices\": [{\"index\": 0, \"delta\": {}, \"finish_reason\": \"stop\"}]}\n\ndata: [DONE]\n\n"
+  }
+]

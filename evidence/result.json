@@ -1,0 +1,34 @@
+{
+  "arms": {
+    "eager": {
+      "correct": 190,
+      "errors": 0,
+      "missed": 2620,
+      "unsafe": 4984
+    },
+    "json-ready": {
+      "correct": 3091,
+      "errors": 0,
+      "missed": 0,
+      "unsafe": 2083
+    },
+    "terminal": {
+      "correct": 5174,
+      "errors": 281,
+      "missed": 0,
+      "unsafe": 0
+    },
+    "whole-buffer-terminal": {
+      "correct": 5174,
+      "errors": 281,
+      "missed": 0,
+      "unsafe": 0
+    }
+  },
+  "fixtures": 12,
+  "records": 20696,
+  "reference_failure": 0,
+  "terminal_correct": 5174,
+  "terminal_failure": 0,
+  "units": 5174
+}

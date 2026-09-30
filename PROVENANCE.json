@@ -1,0 +1,55 @@
+{
+  "artifact": "tool-stream-completion-corpus",
+  "corrections": "hello@cybernative.ai",
+  "data_origin": "Twelve company-authored synthetic SSE/chat-delta fixtures; no model generations, customer captures, copied issue text, weights or third-party code.",
+  "date": "2026-09-30",
+  "evidence_files": {
+    "raw.ndjson": "1f521f8a41c54c9b8460cb1b6b1dee570f139c4f90ef7d15cf6ca78a92f1fd78",
+    "result.json": "1c0cdd806b3d79001d33009ce6e5db452d5e67df28e2ffc7333152ff8256ebe7"
+  },
+  "execution": {
+    "abort": "Missing records, unexpected exit, declared time/size limit, container residue, within-arm disagreement.",
+    "cleanup": "Both measurement containers absent after successful trials.",
+    "container_image_digest": "python@sha256:229a2c5bfa27522db7815ea81f9bed70af17ccb9de9fc7ad142b1877b5830d36",
+    "cpu": 1,
+    "declared_output_ceiling_mib": 64,
+    "gpu": false,
+    "memory_mib": 256,
+    "model_api_requests": 0,
+    "network": "none in measurement container",
+    "outer_runtime_ceiling_seconds": 120,
+    "output": "writable only",
+    "pids": 64,
+    "platform": "Linux x86_64",
+    "privilege": "non-root, all capabilities dropped, no-new-privileges",
+    "python": "CPython 3.12.13",
+    "representative_trial": "a",
+    "root_filesystem": "read-only",
+    "runtime_ceiling_seconds": 90,
+    "source": "read-only",
+    "trial_b": "Identical raw and result bytes; omitted as duplicate, not an independent dataset.",
+    "trials": 2
+  },
+  "labels": [
+    "Executed",
+    "Artifact checked (agent QA)"
+  ],
+  "license": "Apache-2.0",
+  "privacy_class": "public synthetic",
+  "publisher": "CyberNative AI LLC",
+  "qa": {
+    "assistance": "AI-assisted fixture design, code, execution and explanation. AI contributors are not formal authors.",
+    "attestation": "No independent signed scientific attestation or archive DOI.",
+    "review": "A different AI contributor checked source/evidence hashes, full record coverage and two fresh bounded repeats. Review shared the publisher organization, authored data, code, harness and environment with production; this is agent QA, not independent scientific reproduction."
+  },
+  "question": "Does requiring a completed tool-call finish distinguish intended accepts/refusals from accepting as soon as arguments parse, and does incremental framing outperform whole-buffer framing on correctness?",
+  "sampling": "Exhaustive whole, one-byte and every two-part byte split for each authored stream. Deterministic; seed 0 identifies the run, not random sampling.",
+  "setup_deviation": "Initial execution produced no measurements because the non-root executor could not read staged source permissions. The executor UID was corrected before the measured trials; a date-format validation issue was also corrected. Fixtures, parsers, scores and acceptance criteria were unchanged; no results were discarded.",
+  "source_files": {
+    "fixture.json": "38f8b5528f768230b1cf0f1281b29d40d426a68d14ca79a1fda6729448f3de69",
+    "measure.py": "17cfcec026d21722d54d33aadd0a8f14f0225993a21547f36f01c39c2575639c",
+    "streamcheck.py": "a0ef54878e36c2d2a1d6e1064be9f097a1f4accb235a553bcbc63c6b91b6185c",
+    "test_streamcheck.py": "aae31e468f3156627e2eab27f8c5510adff39a56fc1155ba5db89182895dfcd1"
+  },
+  "version": "1.0.0"
+}
