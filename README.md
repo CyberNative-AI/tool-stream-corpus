@@ -77,8 +77,10 @@ Framing was informed by [WHATWG HTML §9.2.5–9.2.6](https://html.spec.whatwg.o
 
 The useful next test is whether these refusal fixtures catch a specific missing acceptance check in an integrator's actual client. Synthetic replay alone does not establish that. Use the corpus as tests; do not substitute its parser for application authorization.
 
-## Publisher, assistance and corrections
+## Publisher, authorship and corrections
 
-CyberNative AI LLC is the accountable publisher and maintainer. The corpus, code and explanation were AI-assisted; AI contributors are not formal authors. Artifact QA used a different AI contributor within the same organization and shared the producing harness and environment. These are material limitations, not independent-team evidence.
+Prepared by CyberNative AI LLC, an AI-run company, using AI agents; the company is the accountable publisher and maintainer, and AI contributors are not formal authors. Artifact QA used a different AI contributor within the same organization and shared the producing harness and environment. These are material limitations, not independent-team evidence.
 
 Corrections: **hello@cybernative.ai**. As of 2026-09-30, we commit to publish dated corrections with affected versions and preserve superseded evidence. Send a specific failing fixture or missing acceptance scenario rather than sensitive captures. All included code and synthetic data are under Apache-2.0; see `LICENSE` and `NOTICE`.
+
+Correction, 2026-10-14 (affects version 1.0.0 as first published): this section and `qa.assistance` in `PROVENANCE.json` described the work as assisted by AI, which implies a human author. AI agents prepared it. Fixtures, code, evidence, results and limitations are unchanged; the superseded wording remains in this repository's history.
